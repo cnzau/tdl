@@ -1,0 +1,375 @@
+.top-bar {
+    width: 100%;
+    z-index: 10;
+    transition: height .25s ease;
+    height: 4.5em;
+    background-color: rgba(255, 255, 255, .8);
+}
+
+.top-bar.shrink {
+    transition: height .25s ease;
+    height: 3em;
+    background-color: rgba(255, 255, 255, .95);
+}
+
+.top-bar .top-bar-right,
+.top-bar .top-bar-left {
+    transition: padding-top .25s ease;
+    padding-top: 1em;
+}
+
+.top-bar .top-bar-right {
+    transition: font-size .25s ease;
+    font-size: 1.5em
+}
+
+.top-bar.shrink .top-bar-right {
+    transition: font-size .25s ease;
+    font-size: 1em;
+}
+
+.top-bar.shrink .top-bar-right,
+.top-bar.shrink .top-bar-left {
+    padding-top: 0em;
+}
+
+.logo {
+    transition: height .25s ease;
+    height: 4em;
+}
+
+.top-bar.shrink > .top-bar-left > .navbar-brand > .logo {
+    transition: height .25s ease;
+    height: 2.5em;
+}
+
+.pimg1,
+.pimg5,
+.pimg6 {
+    position: relative;
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+}
+
+.pimg1 {
+    background-image: url(../img/img1a.jpg);
+    min-height: 100vh;
+}
+
+.pimg5 {
+    background-image: url(../img/img5.jpg);
+    /*    min-height: 90vh;*/
+    /*    opacity:     0.3;*/
+}
+
+.pimg6 {
+    background-image: url(../img/img6.jpg);
+}
+
+.slogan {
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    margin: auto;
+    position: absolute;
+    height: 10vh;
+    width: 50vw;
+}
+
+.slogan > * {
+    color: #fff;
+}
+
+.overlay {
+    background: rgba(0, 0, 0, 0.6);
+    /*    position: relative;*/
+    top: 0;
+    height: 100vh;
+    width: 100vw;
+}
+
+/* ==================================================== */
+
+h3,
+h4 {
+    padding-top: 1.5em;
+    margin-bottom: 1em;
+}
+
+/* ==================================================== */
+
+#azure img {
+    height: 10em;
+    min-width: 15em;
+}
+
+#neuroinnova img {
+    height: 10em;
+    min-width: 12em;
+}
+
+#microsoft img {
+    height: 10em;
+    min-width: 16em;
+}
+
+/* ==================================================== */
+
+#clients {
+    background-color: darkgrey;
+}
+
+/* Small only */
+
+@media screen and (max-width: 39.9375em) {
+    #partners,
+    #clients {
+        padding-top: 1em;
+        padding-bottom: 2em;
+    }
+}
+
+/* Medium and up */
+
+@media screen and (min-width: 40em) {
+    #partners,
+    #clients {
+        padding-top: 1.5em;
+        padding-bottom: 3em;
+    }
+}
+
+#stimainvestment img {
+    height: 8em;
+    width: 15em;
+}
+
+#lgt img {
+    height: 8em;
+    width: 10em;
+}
+
+#prittworld img {
+    height: 8em;
+    width: 24em;
+}
+
+/* ==================================================== */
+
+@media screen and (max-width: 39.9375em) {
+    #contact {
+        /*        padding: .5em;*/
+    }
+}
+
+@media screen and (min-width: 40em) and (max-width: 63.9375em) {
+    #contact {
+        /*        padding: 1em;*/
+        /*    min-height: 75vh;*/
+    }
+}
+
+@media screen and (min-width: 64em) {
+    #contact {
+        /*        padding: 2em;*/
+        /*    min-height: 75vh;*/
+    }
+}
+
+#contact > div {
+    /*    margin: 2em;*/
+}
+
+.elevate {
+    background: rgba(255, 255, 255, .8);
+}
+
+.contact-header {
+    margin-top: 3em;
+}
+
+@media screen and (min-width: 40em) {
+    .contact-left {
+        margin: auto;
+        padding: 1.5em;
+        border-right: 1.5px dotted rgba(0, 0, 0, 0.3);
+    }
+}
+
+#message-header {
+    margin-bottom: 1em;
+}
+
+.fa-asterisk {
+    font-size: 0.5em;
+    color: #ec5840;
+    vertical-align: text-top;
+}
+
+.cont {
+    font-size: small;
+}
+
+#_gotcha {
+    display: none;
+}
+
+.callout {
+    border: none;
+}
+
+.form-error {
+    margin-top: 0;
+    margin-bottom: -1rem;
+}
+
+:focus {
+    outline: none;
+}
+
+.cl {
+    position: relative;
+    margin-bottom: 2em;
+}
+
+
+/*necessary to give position: relative to parent. */
+
+input,
+textarea {
+    color: #333;
+    width: 100%;
+    box-sizing: border-box;
+    overflow: hidden;
+    position: relative;
+    z-index: 1;
+}
+
+[type='text'],
+[type='email'],
+textarea,
+.is-invalid-input {
+    box-shadow: none;
+}
+
+[type='text']:focus,
+[type='email']:focus,
+textarea:focus,
+.is-invalid-input:focus {
+    border: none;
+}
+
+.effect-17 {
+    border: 0;
+    border-bottom: 1px solid rgba(0, 0, 0, 0.3);
+    margin-bottom: 0;
+    background-color: transparent;
+}
+
+.effect-17 ~ .focus-border {
+    position: absolute;
+    bottom: 2;
+    left: 50%;
+    width: 0;
+    height: 2px;
+    background-color: #3399FF;
+    transition: 0.4s;
+}
+
+.is-invalid-input:not(:focus) {
+    background-color: #f9eceaaa;
+}
+
+.effect-17.is-invalid-input ~ .focus-border {
+    position: absolute;
+    bottom: 0;
+    left: 50%;
+    width: 0;
+    height: 2px;
+    background-color: #ec5840;
+    transition: 0.4s;
+}
+
+.effect-17:focus ~ .focus-border {
+    width: 100%;
+    transition: 0.4s;
+    left: 0;
+}
+
+.effect-17 ~ label {
+    position: absolute;
+    width: 100%;
+    top: 0.5em;
+    color: rgba(0, 0, 0, 0.7);
+    transition: 0.3s;
+    z-index: 0;
+}
+
+.effect-17:focus ~ label,
+.has-content.effect-17 ~ label {
+    top: -1.4em;
+    color: #3399FF;
+    transition: 0.3s;
+}
+
+/* ======================================== */
+
+.video-wrapper {
+    position: relative;
+}
+
+.video-wrapper > video {
+    width: 100%;
+    vertical-align: middle;
+}
+
+.video-wrapper > video.has-media-controls-hidden::-webkit-media-controls {
+    display: none;
+}
+
+.video-overlay-play-button {
+    -webkit-box-sizing: border-box;
+    box-sizing: border-box;
+    width: 100%;
+    height: 100%;
+    padding: 10px calc(50% - 50px);
+    position: absolute;
+    top: 0;
+    left: 0;
+    display: block;
+    opacity: 0.5;
+    cursor: pointer;
+    background-color: rgba(0, 0, 0, 0.7);
+    /*    background-image: -webkit-gradient(linear, left top, left bottom, from(transparent), to(#000));*/
+    /*    background-image: linear-gradient(transparent, #000);*/
+    -webkit-transition: opacity 150ms;
+    transition: opacity 150ms;
+}
+
+.video-overlay-play-button:hover {
+    opacity: 1;
+}
+
+.video-overlay-play-button.is-hidden {
+    display: none;
+}
+
+/* ==================================================== */
+
+/* ==================================================== */
+
+/* ==================================================== */
+
+.footer {
+    height: 5em;
+    background-color: dimgrey;
+    color: white;
+}
+
+.footer-text {
+    margin-top: 2em;
+}
