@@ -2,6 +2,40 @@
     z-index: 5;
 }
 
+.top-bar ul {
+    background-color: transparent;
+}
+
+/* Small only */
+
+@media screen and (max-width: 39.9375em) {
+    .title-bar {
+        background-color: #fff;
+        height: 3.5em;
+    }
+    .menu-icon::after {
+        /* the block itself, the first line */
+        background: #000;
+        /* middle and bottom */
+        box-shadow: 0 7px 0 #000,
+        0 14px 0 #000;
+        /* respect WebKit */
+        -webkit-box-shadow: 0 7px 0 #000,
+        0 14px 0 #000;
+    }
+    .top-bar {
+        background-color: rgba(255, 255, 255, 0.95);
+        height: calc(100vh - 3.5em);
+    }
+
+    .top-bar-right {
+        font-size: 2em;
+        height: 75vh;
+    }
+}
+
+/* medium and up*/
+
 @media screen and (min-width: 40em) {
     .top-bar {
         width: 100%;
@@ -30,7 +64,7 @@
 
     .top-bar.shrink .top-bar-right {
         transition: font-size .25s ease;
-        font-size: 1em;
+        font-size: 1.2em;
     }
 
     .top-bar.shrink .top-bar-right,
@@ -47,46 +81,6 @@
         transition: height .25s ease;
         height: 2.5em;
     }
-}
-
-.top-bar ul {
-    background-color: transparent;
-}
-
-/* Small only */
-
-@media screen and (max-width: 39.9375em) {
-    /*
-    .title-a {
-        position: fixed;
-    }
-*/
-    .title-bar {
-        background-color: #fff;
-        height: 3.5em;
-    }
-    .menu-icon::after {
-        /* the block itself, the first line */
-        background: #000;
-        /* middle and bottom */
-        box-shadow: 0 7px 0 #000,
-        0 14px 0 #000;
-        /* respect WebKit */
-        -webkit-box-shadow: 0 7px 0 #000,
-        0 14px 0 #000;
-    }
-    .top-bar {
-        background-color: #fff;
-    }
-
-    /*    div#mainNavigation.top-bar.sticky.is-anchored.is-at-top {
-        position: fixed;
-        bottom: 0 !important;
-        right: 0;
-        z-index: 3;
-        background-color: #fff;
-    }
-*/
 }
 
 .pimg1,
