@@ -1,9 +1,9 @@
 $(document).foundation();
 
-$('.top-bar').on('sticky.zf.stuckto:top', function () {
-    $(this).addClass('shrink');
+$('.title-a').on('sticky.zf.stuckto:top', function () {
+    $('.top-bar').addClass('shrink');
 }).on('sticky.zf.unstuckfrom:top', function () {
-    $(this).removeClass('shrink');
+    $('.top-bar').removeClass('shrink');
 });
 
 // Video
@@ -31,7 +31,7 @@ var videoPlayButton,
         },
 
         hideVideoPlayButton: function () {
-            //            video.removeAttribute('loop muted')
+            video.removeAttribute('loop muted')
             console.log("whatata")
             video.volume = 0.5
             video.muted = false

@@ -17,42 +17,47 @@
 </head>
 
 <body>
-    <div class="pimg1" id="home">
-        <div data-sticky-container>
-            <div class="title-bar show-for-small-only" data-responsive-toggle="mainNavigation" data-hide-for="medium">
-                <div class="title-bar-left">
-                    <a class="navbar-brand" href="#"><img src="img/logo.png" class="logo" alt="NeuInvest"></a>
+    <div class="grid-container full pimg1" id="home">
+        <div class="grid-container full" style="background-color: rgba(0, 0, 0, 0.6); height: 100vh;">
+            <div class="grid-x title-a" data-sticky-container data-sticky data-options="marginTop:0; stickyOn:small;">
+                <div class="cell show-for-small-only">
+                    <div class="title-bar show-for-small-only" data-responsive-toggle="mainNavigation" data-hide-for="medium">
+                        <div class="title-bar-left">
+                            <a class="navbar-brand" href="#"><img src="img/logo.png" class="logo" alt="NeuInvest"></a>
+                        </div>
+                        <div class="title-bar-right">
+                            <button class="menu-icon" type="button" data-toggle="mainNavigation"></button>
+                        </div>
+                    </div>
                 </div>
-                <div class="title-bar-right">
-                    <button class="menu-icon" type="button" data-toggle="mainNavigation"></button>
-                </div>
-            </div>
-
-            <div class="top-bar" id="mainNavigation" data-sticky data-options="marginTop:0;">
-                <div class="top-bar-left hide-for-small-only">
-                    <a class="navbar-brand" href="#"><img src="img/logo.png" class="logo" alt="NeuInvest"></a>
-                </div>
-                <div class="top-bar-right">
-                    <ul class="menu vertical medium-horizontal medium-align-right">
-                        <li>
-                            <a href="#home"><i class="fa fa-home"></i></a>
-                        </li>
-                        <li>
-                            <a href="#platform">Our Platform</a>
-                        </li>
-                        <li>
-                            <a href="#company">Company</a>
-                        </li>
-                        <li>
-                            <a href="#contact">Contact</a>
-                        </li>
-                    </ul>
+                <div class="cell small-offset-4 small-8 medium-offset-0 medium-12 large-offset-0 large-12">
+                    <div class="top-bar" id="mainNavigation">
+                        <div class="top-bar-left hide-for-small-only">
+                            <a class="navbar-brand" href="#"><img src="img/logo.png" class="logo" alt="NeuInvest"></a>
+                        </div>
+                        <div class="top-bar-right">
+                            <ul class="menu vertical medium-horizontal medium-align-right">
+                                <li>
+                                    <a href="#home"><i class="fa fa-home"></i></a>
+                                </li>
+                                <li>
+                                    <a href="#platform">Our Platform</a>
+                                </li>
+                                <li>
+                                    <a href="#company">Company</a>
+                                </li>
+                                <li>
+                                    <a href="#contact">Contact</a>
+                                </li>
+                            </ul>
 
 
+                        </div>
+                    </div>
                 </div>
             </div>
         </div>
-        <div class="overlay"></div>
+        <!--        <div class="overlay"></div>-->
         <div class="slogan">
             <h2 class="text-center">Providing an Affordable Payment Platform</h2>
         </div>
@@ -100,8 +105,8 @@
             </div>
         </div>
     </div>
-    <div class="grid-container full" name="platform" id="platform" style="background-image: url(img/img7.png); background-repeat: no-repeat; background-size: cover;">
-        <div class="grid-container full sect-cont" style="background-color: rgba(0,0,0,0.75); color:#fff;">
+    <div class="grid-container full" name="platform" id="platform" style="background-image: url(img/img1.jpg); background-repeat: no-repeat; background-size: cover;">
+        <div class="grid-container full sect-cont" style="background-color: rgba(23,43,83,0.85); color:#fff;">
             <div class="text-center">
                 <h3>Our Platform</h3>
             </div>
@@ -236,10 +241,9 @@
                                     <span class="form-error">Please enter your name.</span>
                                 </div>
                                 <div class="small-12 medium-12 large-12 cell cl input-effect">
-                                    <input class="effect-17" type="text" id="tel" name="tel" placeholder="" required />
+                                    <input class="effect-17" type="text" id="tel" name="tel" placeholder="" />
                                     <label>Tel</label>
                                     <span class="focus-border"></span>
-                                    <span class="form-error">Please enter your name.</span>
                                 </div>
                                 <div class="small-12 medium-12 large-12 cell cl input-effect">
                                     <input class="effect-17" type="email" id="email" name="_replyto" placeholder="" required />

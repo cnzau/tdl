@@ -1,46 +1,92 @@
-.top-bar {
-    width: 100%;
-    z-index: 10;
-    transition: height .25s ease;
-    height: 4.5em;
-    background-color: rgba(255, 255, 255, .8);
+.title-a {
+    z-index: 5;
 }
 
-.top-bar.shrink {
-    transition: height .25s ease;
-    height: 3em;
-    background-color: rgba(255, 255, 255, .95);
+@media screen and (min-width: 40em) {
+    .top-bar {
+        width: 100%;
+        z-index: 5;
+        transition: height .25s ease;
+        height: 4.5em;
+        background-color: rgba(255, 255, 255, .8);
+    }
+
+    .top-bar.shrink {
+        transition: height .25s ease;
+        height: 3em;
+        background-color: rgba(255, 255, 255, .95);
+    }
+
+    .top-bar .top-bar-right,
+    .top-bar .top-bar-left {
+        transition: padding-top .25s ease;
+        padding-top: 1em;
+    }
+
+    .top-bar .top-bar-right {
+        transition: font-size .25s ease;
+        font-size: 1.5em
+    }
+
+    .top-bar.shrink .top-bar-right {
+        transition: font-size .25s ease;
+        font-size: 1em;
+    }
+
+    .top-bar.shrink .top-bar-right,
+    .top-bar.shrink .top-bar-left {
+        padding-top: 0em;
+    }
+
+    .logo {
+        transition: height .25s ease;
+        height: 4em;
+    }
+
+    .top-bar.shrink > .top-bar-left > .navbar-brand > .logo {
+        transition: height .25s ease;
+        height: 2.5em;
+    }
 }
 
-.top-bar .top-bar-right,
-.top-bar .top-bar-left {
-    transition: padding-top .25s ease;
-    padding-top: 1em;
+.top-bar ul {
+    background-color: transparent;
 }
 
-.top-bar .top-bar-right {
-    transition: font-size .25s ease;
-    font-size: 1.5em
-}
+/* Small only */
 
-.top-bar.shrink .top-bar-right {
-    transition: font-size .25s ease;
-    font-size: 1em;
-}
+@media screen and (max-width: 39.9375em) {
+    /*
+    .title-a {
+        position: fixed;
+    }
+*/
+    .title-bar {
+        background-color: #fff;
+        height: 3.5em;
+    }
+    .menu-icon::after {
+        /* the block itself, the first line */
+        background: #000;
+        /* middle and bottom */
+        box-shadow: 0 7px 0 #000,
+        0 14px 0 #000;
+        /* respect WebKit */
+        -webkit-box-shadow: 0 7px 0 #000,
+        0 14px 0 #000;
+    }
+    .top-bar {
+        background-color: #fff;
+    }
 
-.top-bar.shrink .top-bar-right,
-.top-bar.shrink .top-bar-left {
-    padding-top: 0em;
-}
-
-.logo {
-    transition: height .25s ease;
-    height: 4em;
-}
-
-.top-bar.shrink > .top-bar-left > .navbar-brand > .logo {
-    transition: height .25s ease;
-    height: 2.5em;
+    /*    div#mainNavigation.top-bar.sticky.is-anchored.is-at-top {
+        position: fixed;
+        bottom: 0 !important;
+        right: 0;
+        z-index: 3;
+        background-color: #fff;
+    }
+*/
 }
 
 .pimg1,
@@ -90,6 +136,7 @@
     top: 0;
     height: 100vh;
     width: 100vw;
+    z-index: 1;
 }
 
 /* ==================================================== */
