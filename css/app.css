@@ -8,7 +8,7 @@
 
 /* Small only */
 
-@media screen and (max-width: 39.9375em) {
+@media screen and (max-width: 63.9375em) {
     .title-bar {
         background-color: #fff;
         height: 3.5em;
@@ -34,9 +34,9 @@
     }
 }
 
-/* medium and up*/
+/* large and up*/
 
-@media screen and (min-width: 40em) {
+@media screen and (min-width: 64em) {
     .top-bar {
         width: 100%;
         z-index: 5;
