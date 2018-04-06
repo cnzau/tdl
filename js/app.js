@@ -42,7 +42,7 @@ var videoPlayButton,
             video.classList.remove('has-media-controls-hidden')
             video.setAttribute('controls', 'controls')
             video.setAttribute('onClick', 'togglePlay()')
-            video.addEventListener('ended', videoEnd)
+            //            video.addEventListener('ended', videoEnd)
         }
     };
 
@@ -51,13 +51,13 @@ videoMethods.renderVideoPlayButton();
 var togglePlay = function () {
     return video.paused ? video.play() : video.pause();
 };
-var videoEnd = function () {
-    video.muted = true;
-    video.loop = true;
-    video.removeAttribute('onClick', 'togglePlay()');
-    video.play();
-    videoMethods.renderVideoPlayButton();
-};
+//var videoEnd = function () {
+//    video.muted = true;
+//    video.loop = true;
+//    video.removeAttribute('onClick', 'togglePlay()');
+//    video.play();
+//    videoMethods.renderVideoPlayButton();
+//};
 
 // JavaScript for label effects only
 $(document).ready(function () {
