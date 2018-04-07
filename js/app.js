@@ -86,3 +86,25 @@ $(document)
         rows = Math.ceil((this.scrollHeight - this.baseScrollHeight) / 29.25);
         this.rows = minRows + rows;
     });
+
+// form validation passed, form will submit if submit event not returned false
+$(document).on("formvalid.zf.abide", function (ev, frm) {
+        // ajax post form
+        $.ajax({
+            type: 'POST',
+            url: '../php/mail.php',
+            data: $('#contact-form').serialize(),
+            success: function () {
+                $('#contact-form')[0].reset();
+                $('.form_result').slideDown('slow', function () {
+                    $(this).delay(3000).slideUp('slow');
+                    $(this).fadeOut('slow');
+                });
+            }
+        });
+    })
+    .on("submit", function (ev) {
+        // to prevent form from submitting upon successful validation
+        ev.preventDefault();
+        console.log("Submit for form id " + ev.target.id + " intercepted");
+    });
