@@ -1,0 +1,4 @@
+#Force www:
+RewriteEngine on
+RewriteCond %{HTTP_HOST} ^neuinvest.com [NC]
+RewriteRule ^(.*)$ http://www.neuinvest.com/$1 [L,R=301,NC]

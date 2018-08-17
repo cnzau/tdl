@@ -1,0 +1,9 @@
+#301 (Permanent) Redirect: Point an entire site to a different URL on a permanent basis. This is the most common type of redirect and is useful in most situations. Here we are redirecting to the "neuinvest.com" domain:
+
+# This allows you to redirect your entire website to any other domain
+#Redirect 301 / http://neuinvest.com/
+
+#302 (Temporary) Redirect: Point an entire site to a different temporary URL. This is useful for SEO purposes when you have a temporary landing page and plan to switch back to your main landing page at a later date:
+
+# This allows you to redirect your entire website to any other domain
+Redirect 302 / http://neuinvest.com/

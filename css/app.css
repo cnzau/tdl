@@ -1,92 +1,180 @@
-.overlay-black {
-    background-color: rgba(0, 0, 0, 0.6);
+/* Large and up */
+
+.header {
+    z-index: 15;
+    background-color: rgba(255, 255, 255, 0.8);
+    position: fixed;
+    width: 100%;
+    height: 4.2em;
+    -webkit-transition: height 0.5s ease,
+    background-color 0.5s ease;
+    -moz-transition: height 0.5s ease,
+    background-color 0.5s ease;
+    -o-transition: height 0.5s ease,
+    background-color 0.5s ease;
+    transition: height 0.5s ease,
+    background-color 0.5s ease;
+}
+
+.scrolled {
+    transition: all 0.5s ease;
+}
+
+.header.scrolled {
+    background-color: rgba(255, 255, 255, 0.95);
+    height: 3em;
+    transition: all 0.5s ease;
+}
+
+.header .navbar-brand img {
+    height: 4.2em;
+    -webkit-transition: height 0.5s ease;
+    -moz-transition: height 0.5s ease;
+    -o-transition: height 0.5s ease;
+    transition: height 0.5s ease;
+}
+
+.header.scrolled .navbar-brand img {
+    height: 2.9em;
+    -webkit-transition: height 0.5s ease;
+    -moz-transition: height 0.5s ease;
+    -o-transition: height 0.5s ease;
+    transition: height 0.5s ease;
+}
+
+.header ul li {
+    font-size: 2em;
+    -webkit-transition: font-size 0.5s ease;
+    -moz-transition: font-size 0.5s ease;
+    -o-transition: font-size 0.5s ease;
+    transition: font-size 0.5s ease;
+}
+
+.header.scrolled ul li {
+    font-size: 1.2em;
+    -webkit-transition: font-size 0.5s ease;
+    -moz-transition: font-size 0.5s ease;
+    -o-transition: font-size 0.5s ease;
+    transition: font-size 0.5s ease;
+}
+
+
+/* Small and medium */
+
+@media screen and (max-width: 40em) {
+    .header {
+        background-color: rgba(255, 255, 255, 0.9);
+        height: 3em;
+    }
+    .header .navbar-brand img {
+        height: 3em;
+    }
+}
+
+.m-nav {
+    z-index: 14;
+    background-color: rgba(255, 255, 255, 0.9);
+    position: fixed;
+    bottom: 0;
+    right: 0;
+    width: 0;
+    height: calc(100vh - 3em);
+    padding-top: 3.5em;
+}
+
+.responsive-menu-icon-line {
+    width: 40px;
+    height: 7px;
+    background-color: #172B53;
+    margin: 5px;
+    border-radius: 2px;
+
+    /* this determines animation speed */
+    transition: all 0.5s ease;
+
+}
+
+/* classes to add for each animation */
+
+.rotate-down {
+    margin-bottom: -12px;
+
+    -ms-transform: rotate(45deg);
+    /* IE 9 */
+    -webkit-transform: rotate(45deg);
+    /* Chrome, Safari, Opera */
+    transform: rotate(45deg);
+}
+
+.rotate-up {
+    margin-top: -12px;
+    -ms-transform: rotate(-45deg);
+    /* IE 9 */
+    -webkit-transform: rotate(-45deg);
+    /* Chrome, Safari, Opera */
+    transform: rotate(-45deg);
+}
+
+.disappear {
+    opacity: 0;
+}
+
+/* grouping div for all bars */
+
+.responsive-menu-icon {
+    width: 60px;
+    padding: 3px;
+    margin-left: 85%;
+    /* this determines animation speed */
+    transition: all 0.5s ease;
+}
+
+.menu-up {
+    padding-top: 15px;
+}
+
+.orbit {
     height: 100vh;
 }
 
-.title-a {
-    z-index: 5;
+.orbit-container {
+    height: 100vh;
 }
 
-.top-bar ul {
-    background-color: transparent;
+.orbit-bullets {
+    height: 3em;
+    margin-top: -3em;
 }
 
-/* Small only */
-
-@media screen and (max-width: 63.9375em) {
-    .title-bar {
-        background-color: #fff;
-        height: 3.5em;
-    }
-    .menu-icon::after {
-        /* the block itself, the first line */
-        background: #000;
-        /* middle and bottom */
-        box-shadow: 0 7px 0 #000,
-        0 14px 0 #000;
-        /* respect WebKit */
-        -webkit-box-shadow: 0 7px 0 #000,
-        0 14px 0 #000;
-    }
-    .top-bar {
-        background-color: rgba(255, 255, 255, 0.95);
-        height: calc(100vh - 3.5em);
-    }
-
-    .top-bar-right {
-        font-size: 2em;
-        height: 75vh;
-    }
+.orbit-image {
+    height: 100vh;
+    width: 100vw;
 }
 
-/* large and up*/
-
-@media screen and (min-width: 64em) {
-    .top-bar {
-        width: 100%;
-        z-index: 5;
-        transition: height .25s ease;
-        height: 4.5em;
-        background-color: rgba(255, 255, 255, .8);
-    }
-
-    .top-bar.shrink {
-        transition: height .25s ease;
-        height: 3em;
-        background-color: rgba(255, 255, 255, .95);
-    }
-
-    .top-bar .top-bar-right,
-    .top-bar .top-bar-left {
-        transition: padding-top .25s ease;
-        padding-top: 1em;
-    }
-
-    .top-bar .top-bar-right {
-        transition: font-size .25s ease;
-        font-size: 2em;
-    }
-
-    .top-bar.shrink .top-bar-right {
-        transition: font-size .25s ease;
-        font-size: 1.2em;
-    }
-
-    .top-bar.shrink .top-bar-right,
-    .top-bar.shrink .top-bar-left {
-        padding-top: 0em;
-    }
-
-    .logo {
-        transition: height .25s ease;
-        height: 4em;
-    }
-
-    .top-bar.shrink > .top-bar-left > .navbar-brand > .logo {
-        transition: height .25s ease;
-        height: 2.5em;
-    }
+.slide {
+    position: relative;
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    height: 100vh;
+    z-index: -3;
 }
+
+.slide div {
+    height: 100vh;
+    width: 100vw;
+    background-color: rgba(0, 0, 0, 0.5);
+}
+
+.slider-img1 {
+    background-image: url(../img/slider/img-1.jpeg);
+}
+
+.slider-img2 {
+    background-image: url(../img/slider/img-2.jpeg);
+}
+
 
 .pimg1,
 .pimg5,
@@ -144,9 +232,9 @@
     left: 0;
     right: 0;
     margin: auto;
-    position: absolute;
     height: 10vh;
     width: 50vw;
+    z-index: 13;
 }
 
 .slogan > * {
@@ -177,7 +265,7 @@
 }
 
 .overlay-white {
-    background-color: rgba(255, 255, 255, 0.8);
+    background-color: rgba(255, 255, 255, 0.95);
 }
 
 h3,
@@ -188,26 +276,75 @@ h4 {
 
 /* ==================================================== */
 
-#azure img {
-    height: 10em;
-    min-width: 15em;
-}
-
-#neuroinnova img {
-    height: 10em;
-    min-width: 10em;
-}
-
-#microsoft img {
-    height: 10em;
-    min-width: 20em;
-}
-
-/* ==================================================== */
-
 #partners {
     background-color: #CCDBDC;
 }
+
+/* Small only */
+
+@media screen and (max-width: 39.9375em) {
+    .partner {
+        margin: 0.5em auto;
+    }
+    #azure img {
+        height: 8em;
+        /*        min-width: 15em;*/
+    }
+
+    #neuroinnova img {
+        height: 4em;
+        /*        min-width: 10em;*/
+    }
+
+    #microsoft img {
+        height: 5em;
+        /*        min-width: 20em;*/
+    }
+}
+
+/* Medium only */
+
+@media screen and (min-width: 40em) and (max-width: 63.9375em) {
+    #azure img {
+        height: 10em;
+        /*        min-width: 15em;*/
+    }
+
+    #neuroinnova img {
+        height: 7em;
+        padding-top: 1.5em
+        /*        min-width: 10em;*/
+    }
+
+    #microsoft img {
+        height: 8em;
+        padding-top: 1em;
+        /*        min-width: 20em;*/
+    }
+}
+
+/* Large and up */
+
+@media screen and (min-width: 64em) {
+    #azure img {
+        height: 10em;
+        min-width: 15em;
+    }
+
+    #neuroinnova img {
+        height: 4em;
+        margin-top: 3em;
+        min-width: 10em;
+    }
+
+    #microsoft img {
+        height: 4em;
+        margin-top: 3em;
+        min-width: 20em;
+    }
+}
+
+/* ==================================================== */
 
 #clients {
     background-color: #9AD1D4;
@@ -240,11 +377,11 @@ h4 {
 
 #lgt img {
     height: 8em;
-    width: 10em;
+    width: 9em;
 }
 
 #prittworld img {
-    height: 8em;
+    height: 7em;
     width: 26em;
 }
 
@@ -275,7 +412,7 @@ h4 {
 }
 
 .elevate {
-    background: rgba(255, 255, 255, .8);
+    background: rgba(246, 246, 246, .95);
 }
 
 .contact-header {
@@ -406,6 +543,12 @@ textarea:focus,
     transition: 0.3s;
 }
 
+.label.success {
+    color: #155724;
+    background-color: #d4edda;
+    border-color: #c3e6cb;
+}
+
 /* ======================================== */
 
 .video-wrapper {
@@ -454,12 +597,36 @@ textarea:focus,
 
 /* ==================================================== */
 
-.footer {
-    height: 5em;
+footer {
+    min-height: 5em;
     background-color: #302B27;
     color: white;
+    padding: 2em;
+    font-size: 12px;
 }
 
-.footer-text {
-    margin-top: 2em;
+.gss_b {
+    display: none;
 }
+
+@media screen and (max-width: 39.9375em) {
+    footer {
+        font-size: 13px;
+        line-height: 2em;
+        padding-bottom: 3em;
+    }
+}
+
+/*
+.gss .def {
+    visibility: visible;
+    opacity: 1;
+}
+
+.gss .def:hover {
+    visibility: hidden;
+    opacity: 0;
+    -webkit-transition: opacity 600ms, visibility 600ms;
+    transition: opacity 600ms, visibility 600ms;
+
+}*/
