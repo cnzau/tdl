@@ -222,7 +222,7 @@
 }
 
 .pimg6 {
-    background-image: url(../img/img6.jpg);
+    background-image: url(../img/techplus_bck.jpg);
 }
 
 .slogan {
@@ -266,6 +266,10 @@
 
 .overlay-white {
     background-color: rgba(255, 255, 255, 0.95);
+}
+
+.overlay-white-2 {
+    background-color: rgba(255, 255, 255, 0.85);
 }
 
 h3,
