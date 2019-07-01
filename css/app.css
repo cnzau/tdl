@@ -272,6 +272,10 @@
     background-color: rgba(255, 255, 255, 0.85);
 }
 
+.overlay-black {
+    background-color: rgba(0, 0, 0, 0.1);
+}
+
 h3,
 h4 {
     padding-top: 1.5em;
@@ -281,7 +285,12 @@ h4 {
 /* ==================================================== */
 
 #partners {
-    background-color: #CCDBDC;
+    /*    background-color: #CCDBDC;*/
+    background: rgb(154, 209, 212);
+    background: -moz-linear-gradient(0deg, rgba(154, 209, 212, 1) 0%, rgba(204, 219, 220, 1) 100%);
+    background: -webkit-linear-gradient(0deg, rgba(154, 209, 212, 1) 0%, rgba(204, 219, 220, 1) 100%);
+    background: linear-gradient(0deg, rgba(154, 209, 212, 1) 0%, rgba(204, 219, 220, 1) 100%);
+    filter: progid:DXImageTransform.Microsoft.gradient(startColorstr="#9ad1d4", endColorstr="#ccdbdc", GradientType=1);
 }
 
 /* Small only */
@@ -351,7 +360,7 @@ h4 {
 /* ==================================================== */
 
 #clients {
-    background-color: #9AD1D4;
+    /*    background-color: #9AD1D4;*/
 }
 
 /* Small only */
